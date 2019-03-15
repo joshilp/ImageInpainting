@@ -1,16 +1,61 @@
-Create a virtual env for running the python code
+# Image-Inpainting
 
-change your working directory to the python folder then:
+Attempts to automate the painting process done by VFX artists using machine learning, thus removing or reducing the bottleneck in the VFX pipeline. The idea behind this project is to modify TensorFlow's `retrain.py` by adding multiple activation layers before the final soft-max layer, in hopes of increasing accuracy and stability of the model.
 
-`python -m venv proj-env`
-or
-`python3 -m venv proj-env`
+## Languages Used
 
-and then
+* Python
 
-`python -m pip install -r requirements.txt`
-or
-`python3 -m pip install -r requirements.txt`
+## Project Highlights
 
-To download imagenet training data (Warning 155GB compressed):
-https://www.kaggle.com/c/imagenet-object-localization-challenge/download/imagenet_object_localization.tar.gz
+To see the a project overview and to dive into the math, check out [Applying Image Inpainting to Video Post Production](http://joshpatel.ca/image_inpainting) at my portfolio [JoshPatel.ca](http://joshpatel.ca/). However, to see the full details of the implementation, please have a read of the [original paper](https://arxiv.org/abs/1804.07723).
+
+## Contributors
+
+* Joshil Patel
+* Di Wang
+* Bryce Haley
+* Kino Roy
+* Hyukho Kwon
+
+## Getting Started
+
+### Dependencies
+Install the following:
+* Python
+* Jupiter Notebooks
+* Keras
+* Tensorflow
+
+### Training Data
+
+* Download the Imagenet training data from [Kaggle](https://www.kaggle.com/c/imagenet-object-localization-challenge/download/imagenet_object_localization.tar.gz) (155 GB compressed):
+
+## Creating Masks, Training, Predicting
+
+Use the `.ipnyb` files in the original pull folder to create masks, train the network, and make predictions:
+
+* Step1 - Mask Generation.ipynb
+* Step2 - Partial Convolution Layer.ipynb
+* Step3 - UNet Architecture.ipynb
+* Step4 - Imagenet Training.ipynb
+* Step5 - Prediction.ipynb
+* Step6 - New Prediction.ipynb
+
+To see predictions work, use the footage and masks (folders 00 to 07) provided in `original pull->data->footage` and run `predict.py` located in `original pull` to make it work.
+
+## Predictions Results
+
+View the results of the predictions [here](https://vimeo.com/310712744).
+
+## Reference
+
+Keras implementation of "Image Inpainting for Irregular Holes Using Partial Convolutions", https://arxiv.org/abs/1804.07723. 
+
+### Authors from NVIDIA Corporation:
+* Guilin Liu
+* Fitsum A. Reda
+* Kevin J. Shih
+* Ting-Chun Wang
+* Andrew Tao
+* Bryan Catanzaro
