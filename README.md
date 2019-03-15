@@ -47,7 +47,7 @@ To see predictions work:
 ```
 git clone https://joshilp@bitbucket.org/joshilp/imageinpainting.git
 ```
-* Fights the `logs` folder and move it to here: `ImageInpainting\original pull\data\logs`
+* Find the `logs` folder and move it here: `ImageInpainting\original pull\data\logs`
 * Create  a folder `footage`: `ImageInpainting\original pull\data\footage`
 * In the `footage` folder, add sub folders `00, 01, 02,` etc.
 * Within these folders, add three subfolders: `footage, mask, prediction`
