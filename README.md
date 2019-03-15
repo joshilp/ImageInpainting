@@ -42,7 +42,20 @@ Use the `.ipnyb` files in the original pull folder to create masks, train the ne
 * Step5 - Prediction.ipynb
 * Step6 - New Prediction.ipynb
 
-To see predictions work, use the footage and masks (folders 00 to 07) provided in `original pull->data->footage` and run `predict.py` located in `original pull` to make it work.
+To see predictions work:
+* Pull weights from here:
+```
+git clone https://joshilp@bitbucket.org/joshilp/imageinpainting.git
+```
+* Fights the `logs` folder and move it to here: `ImageInpainting\original pull\data\logs`
+* Create  a folder `footage`: `ImageInpainting\original pull\data\footage`
+* In the `footage` folder, add sub folders `00, 01, 02,` etc.
+* Within these folders, add three subfolders: `footage, mask, prediction`
+* Add your footage and masks to the relevant folders
+* Update `predicty.py` to reflect the folders you have created, and run it:
+```
+python predict.py
+```
 
 ## Predictions Results
 
